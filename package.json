@@ -11,11 +11,6 @@
     "check:all": "npm run check:types && npm run check:lint && npm run check:format",
     "prepare-husky": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check:all"
-    }
-  },
   "keywords": [],
   "author": "Michael Angelo Larrubis",
   "license": "ISC",
