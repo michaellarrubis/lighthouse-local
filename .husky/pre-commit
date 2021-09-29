@@ -4,6 +4,13 @@
 echo '🏗️👷 Styling, Testing and Building project before committing'
 
 # Check Prettier standards
+npm run check:commitmsg ||
+(
+  echo 'Commit Messages does not follow rules.';
+  false;
+)
+
+# Check Prettier standards
 npm run check:format ||
 (
   echo 'Prettier Check Failed. Make the required changes listed above and try commit again.';

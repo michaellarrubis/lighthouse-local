@@ -12,10 +12,10 @@
     "check:lint": "eslint *.ts src/**/*.ts --fix && eslint *.ts src/**/*.ts",
     "check:format": "prettier --write . && prettier --check .",
     "check:all": "npm run check:types && npm run check:lint && npm run check:format",
-    "prepare-husky": "husky install && chmod ug+x .husky/*",
-    "commitmsg": "node node_modules/commitplease .git/COMMIT_EDITMSG"
+    "check:commitmsg": "node node_modules/commitmsg .git/COMMIT_EDITMSG",
+    "prepare-husky": "husky install && chmod ug+x .husky/*"
   },
-  "commitplease": {
+  "commitmsg": {
     "limits": {
       "firstLine": "72",
       "otherLine": "80"
