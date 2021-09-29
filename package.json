@@ -7,9 +7,9 @@
   "author": "Michael Angelo Larrubis",
   "license": "ISC",
   "scripts": {
-    "serve": "nodemon server.ts",
+    "serve": "nodemon src/server.ts",
     "check:types": "tsc --pretty --noEmit",
-    "check:lint": "eslint *.ts src/**/*.ts --fix && eslint *.ts src/**/*.ts",
+    "check:lint": "eslint src/**/*.ts --fix && eslint src/**/*.ts",
     "check:format": "prettier --write . && prettier --check .",
     "check:all": "npm run check:types && npm run check:lint && npm run check:format",
     "prepare-husky": "husky install && chmod ug+x .husky/*"
@@ -27,6 +27,7 @@
     "@typescript-eslint/parser": "^4.32.0",
     "add": "^2.0.6",
     "commitmsg": "^1.0.2",
+    "ejs": "^3.1.6",
     "eslint": "^7.32.0",
     "express": "^4.17.1",
     "prettier": "^2.4.1"
