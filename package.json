@@ -3,17 +3,36 @@
   "version": "1.0.0",
   "description": "Check Web Applications Performance Locally!",
   "main": "index.js",
+  "keywords": [],
+  "author": "Michael Angelo Larrubis",
+  "license": "ISC",
   "scripts": {
     "serve": "nodemon server.ts",
     "check:types": "tsc --pretty --noEmit",
     "check:lint": "eslint *.ts src/**/*.ts --fix && eslint *.ts src/**/*.ts",
     "check:format": "prettier --write . && prettier --check .",
     "check:all": "npm run check:types && npm run check:lint && npm run check:format",
-    "prepare-husky": "husky install && chmod ug+x .husky/*"
+    "prepare-husky": "husky install && chmod ug+x .husky/*",
+    "commitmsg": "node node_modules/commitplease .git/COMMIT_EDITMSG"
   },
-  "keywords": [],
-  "author": "Michael Angelo Larrubis",
-  "license": "ISC",
+  "commitplease": {
+    "limits": {
+      "firstLine": "72",
+      "otherLine": "80"
+    },
+    "style": "jquery",
+    "component": true,
+    "components": [
+      "Build",
+      "Fix",
+      "Develop",
+      "Refactor",
+      "Delete",
+      "Merge",
+      "Test",
+      "Update"
+    ]
+  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.10.1",
@@ -25,6 +44,8 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
+    "add": "^2.0.6",
+    "commitmsg": "^1.0.2",
     "eslint": "^7.32.0",
     "express": "^4.17.1",
     "prettier": "^2.4.1"
