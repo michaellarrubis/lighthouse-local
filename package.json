@@ -12,26 +12,7 @@
     "check:lint": "eslint *.ts src/**/*.ts --fix && eslint *.ts src/**/*.ts",
     "check:format": "prettier --write . && prettier --check .",
     "check:all": "npm run check:types && npm run check:lint && npm run check:format",
-    "check:commitmsg": "node node_modules/commitmsg .git/COMMIT_EDITMSG",
     "prepare-husky": "husky install && chmod ug+x .husky/*"
-  },
-  "commitmsg": {
-    "limits": {
-      "firstLine": "72",
-      "otherLine": "80"
-    },
-    "style": "jquery",
-    "component": true,
-    "components": [
-      "Build",
-      "Fix",
-      "Develop",
-      "Refactor",
-      "Delete",
-      "Merge",
-      "Test",
-      "Update"
-    ]
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
