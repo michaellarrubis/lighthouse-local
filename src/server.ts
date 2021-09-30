@@ -4,7 +4,7 @@ import path from 'path'
 import * as routes from './routes'
 
 const app = express()
-const port = 7030
+const port = 3001
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
