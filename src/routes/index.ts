@@ -9,7 +9,9 @@ export const global = (app: express.Application) => {
 
   app.post('/', async (req: any, res) => {
     const url = req.body.url
-    auditSite(url)
+    const isMobile = req.body.device === 'mobile'
+
+    auditSite(url, isMobile)
       .then((results) => {
         if (results) {
           fs.writeFileSync('src/public/report.html', results)
