@@ -1,7 +1,7 @@
 const lighthouse = require('lighthouse')
 const chromeLauncher = require('chrome-launcher')
 
-export const auditSite = (url: string, isMobile: boolean = true) => {
+export const auditSite = (url: string, isMobile = true) => {
   return chromeLauncher
     .launch({
       startingUrl: url,
