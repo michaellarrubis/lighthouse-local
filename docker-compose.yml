@@ -1,0 +1,10 @@
+version: '3.2'
+services:
+  lighthouse_local:
+    build: .
+    command: npm run serve
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    ports:
+      - '7030:7030'
